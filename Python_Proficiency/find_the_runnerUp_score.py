@@ -26,6 +26,13 @@ def get_second_highest_score(n, arr):
                         # check value at index is greater than second max and not already a max value
                         elif (arr[i] > second_max_val) and (arr[i] != max_val):
                             second_max_val = arr[i]
+                        # case when max and second max match and there is a value smaller that second max
+                        elif max_val == second_max_val and arr[i] < second_max_val:
+                            max_val = second_max_val
+                            second_max_val = arr[i]
+
+
+
 
     return second_max_val
 
